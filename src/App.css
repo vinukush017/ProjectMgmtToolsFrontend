@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+/* Container styles */
+body {
+  font-family: "Poppins", sans-serif; /* Clean modern font */
+  font-size: 16px;
+  color: #ffc107; /* Maintain consistent yellow */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  color: #ffc107;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  font-size: 1rem; /* Slightly smaller text for paragraphs */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 83vh;
+  justify-content: space-between;
   align-items: center;
+  background-color: #f5f5f5; /* Light grey background for contrast */
+  padding: 10px;
+}
+
+.halfImg {
+  flex: 1;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 0px 0px 0px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.halfForm {
+  flex: 1; /* Equal space for the form side */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 20px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-card {
+  background-color: #1c1c1c; /* Dark black background for the form */
+  padding: 30px;
+  border-radius: 16px; /* Rounded corners for modern design */
+  color: #ffc107; /* Yellow text color */
+  width: 100%;
+  max-width: 400px; /* Wider form similar to the blue image */
+  text-align: center;
+  margin: 0 20px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+  transform: translateX(-35px);
+}
+
+.form-card h1 {
+  margin-bottom: 25px;
+  color: #ffc107; /* Yellow heading */
+  font-size: 1.8rem;
+}
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="password"] {
+  width: 85%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  color: #ffc107;
+  font-size: 1rem;
+  background-color: #1c1c1c;
+  transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+  color: #ffc107;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ffeb3b;
+  box-shadow: 0 0 8px rgba(255, 203, 7, 0.5);
+}
+.form-card input:hover {
+  border-color: #ffeb3b;
+}
+
+.form-card button {
+  width: 85%;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #ffc107; /* Yellow button */
+  color: #1c1c1c;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px; /* Rounded button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  padding: 16px 0;
+}
+
+.form-card button:hover {
+  background-color: #ffeb3b; /* Lighter yellow on hover */
+  transform: translateY(-2px); /* Slightly lift the button */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-card p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ffc107;
+}
+
+.form-card a {
+  color: #ffeb3b; /* Lighter yellow for links */
+  text-decoration: none;
+}
+
+.form-card a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+.forgot-password {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #ffeb3b;
+  text-align: right;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  color: #ffc107;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .halfImg,
+  .halfForm {
+    flex: 1 1 100%; /* Stack elements on small screens */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 600px) {
+  .form-card {
+    padding: 20px;
+    max-width: 90%;
   }
+
+  .form-card input,
+  .form-card button {
+    width: 100%;
+  }
+}
+
+.error {
+  color: red;
 }

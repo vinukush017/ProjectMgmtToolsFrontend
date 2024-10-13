@@ -1,0 +1,146 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  color: #fff;
+  border-bottom: 2px solid #ffc107;
+  padding: 15px 20px;
+  max-height: 9vh;
+}
+
+.logo {
+  flex: 0 0 auto;
+}
+
+.logo-image {
+  height: 60px;
+  width: auto;
+}
+
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background-color: #ffc107;
+  padding: 20px 40px;
+  border-radius: 25px;
+}
+
+.icon-menu a :hover {
+  color: #ffeb3b;
+}
+
+.nav-menu a {
+  color: #1c1c1c;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav a {
+  color: #ffc107;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.profile-menu {
+  /* Add styles for your profile icon here */
+  position: relative; /* Allows dropdown positioning */
+}
+
+.nav a:hover {
+  color: #ffc107; /* Change color on hover */
+  transition: color 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    display: none; /* Hide navigation on smaller screens */
+  }
+  .nav button.hamburger {
+    display: block; /* Show hamburger icon */
+  }
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.profile-button {
+  cursor: pointer;
+  background-color: #ffc107;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: -10px;
+  background-color: #ffc107; /* Darker background */
+  color: #1c1c1c; /* Yellow text */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  z-index: 1; /* Ensure it appears on top */
+  min-width: 200px; /* Minimum width for dropdown */
+  margin-top: 12px;
+}
+
+.dropdown-menu::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffc107 transparent;
+}
+
+.dropdown-item {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+  padding: 10px 30px; /* Add padding for space around items */
+  color: #1c1c1c; /* Yellow text color */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.dropdown-item:hover {
+  background-color: #1c1c1c; /* Change to yellow on hover */
+  color: #ffc107;
+}
+
+.dropdown-item > .svg-inline--fa {
+  margin-right: 8px; /* Space between icon and text */
+}
