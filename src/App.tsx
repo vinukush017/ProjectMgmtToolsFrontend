@@ -1,9 +1,9 @@
 import "./App.css"; // Import your CSS styles
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import necessary components from react-router-dom
-import Register from "./components/register"; // Ensure correct case in import
-import Login from "./components/login"; // Ensure correct case in import
-import Header from "./components/header";
-import HomePage from "./components/homePage";
+import Register from "./pages/RegisterUserPage";
+import Login from "./pages/LoginPage";
+import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

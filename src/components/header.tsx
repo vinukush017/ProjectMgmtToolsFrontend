@@ -13,7 +13,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import Logo from "../images/viyaan-high-resolution-logo-transparent.png";
-import "./Header.css";
+import "../styles/Header.css";
 
 const Header = () => {
   const { token, logout } = useAuth();
